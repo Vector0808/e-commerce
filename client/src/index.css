@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+
+@media print {
+  
+  body {
+    background: #F0EADC !important;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+.translateee{
+  background-color: aquamarine;
+  width: full;
+}
+
+font-
+
+/* {
+  outline: 5px solid green !important;
+} */
+
+
+
+
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Hide scrollbar but keep scrolling */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+     /* Firefox */
+}
+
+
+/* Disable horizontal scroll everywhere */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto; /* still allow vertical scroll */
+}
+
+
+/* Shimmer utility */
+@keyframes shimmer-scan { 100% { transform: translateX(100%);} }
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: shimmer-scan 1.1s infinite;
+}
